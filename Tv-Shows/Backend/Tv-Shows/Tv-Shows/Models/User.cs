@@ -13,6 +13,6 @@ namespace Tv_Shows.Models
         public string Password { get; set; }
 
         public ICollection<Comment> Comments { get; set; }
-        public ICollection<UserTvshow> userTvshows { get; set; }
+        public ICollection<UserTvshow> UserTvshows { get; set; }
     }
 }

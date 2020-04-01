@@ -70,7 +70,7 @@ namespace Tv_Shows
             });
 
             services.AddMvc();
-            //services.AddDbContext<Albumcollectioncontext>();
+           services.AddDbContext<TvContext>();
             //services.AddScoped<IRepository<Album>, AlbumRepository>();
             //services.AddScoped<IRepository<Artist>, ArtistRepository>();
             //services.AddScoped<IRepository<Song>, SongRepository>();
