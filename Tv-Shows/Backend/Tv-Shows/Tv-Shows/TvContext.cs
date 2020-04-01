@@ -17,7 +17,7 @@ namespace Tv_Shows
         public DbSet<User> Users { get; set; }
         public DbSet<Tvshow> TvShows { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public virtual DbSet<UserTvshow> UserTvshows { get; set; }
+        public DbSet<UserTvshow> UserTvshows { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=TvShowsDb;Trusted_Connection=True;";
@@ -38,9 +38,25 @@ namespace Tv_Shows
                         .HasOne(c => c.Tvshow)
                         .WithMany(bc => bc.UserTvshows)
                         .HasForeignKey(c => c.TvshowId);
-        }
+
+            modelBuilder.Entity<Comment>().HasData(
+            new Comment
+            {
+                Id=1,
+                Body = "Ghassan",
+                Rating = "5",
+                TvshowId = 1,
+                UserId = 1
+            });
+
+
+
+            }
 
 
         }
+
+
+
 }
    

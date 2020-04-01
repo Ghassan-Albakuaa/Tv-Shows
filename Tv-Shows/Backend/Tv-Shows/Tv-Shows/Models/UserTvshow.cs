@@ -9,10 +9,10 @@ namespace Tv_Shows.Models
     {
         public int Id { get; set; }
 
-        public Tvshow Tvshow { get; set; }
+        public virtual Tvshow Tvshow { get; set; }
         public int TvshowId { get; set; }
 
-        public User User { get; set; }
+        public virtual User User { get; set; }
         public int UserId { get; set; }
     }
 }

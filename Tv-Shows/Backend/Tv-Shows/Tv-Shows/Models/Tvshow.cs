@@ -12,7 +12,7 @@ namespace Tv_Shows.Models
         public string Image { get; set; }
         public string Content { get; set; }
 
-        public ICollection<Comment> Comments { get; set; }
-        public ICollection<UserTvshow> UserTvshows { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<UserTvshow> UserTvshows { get; set; }
     }
 }

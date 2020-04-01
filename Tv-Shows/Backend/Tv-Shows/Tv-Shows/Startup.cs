@@ -90,13 +90,13 @@ namespace Tv_Shows
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env ,TvContext context)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            context.SeedDataContext();
 
             // .net 3.1 cors issue
             app.UseCors(MyAllowSpecificOrigins);
