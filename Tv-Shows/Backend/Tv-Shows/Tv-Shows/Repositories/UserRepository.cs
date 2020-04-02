@@ -7,10 +7,8 @@ using Tv_Shows.Models;
 namespace Tv_Shows.Repositories
 {
     public class UserRepository : IUserRepository
-    {
-        
+    {        
             private TvContext _userDbContext;
-
             public UserRepository(TvContext userDbContext)
             {
             _userDbContext = userDbContext;
