@@ -11,7 +11,7 @@ namespace Tv_Shows.Models
         public string Name { get; set; }
         public string Image { get; set; }
         public string Password { get; set; }
-
+        public string Isbn { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<UserTvshow> UserTvshows { get; set; }
     }
